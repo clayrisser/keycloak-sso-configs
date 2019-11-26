@@ -1,0 +1,80 @@
+{
+  "clientId": "https://nextcloud.example.com/apps/user_saml/saml/metadata",
+  "surrogateAuthRequired": false,
+  "enabled": true,
+  "clientAuthenticatorType": "client-secret",
+  "redirectUris": ["https://nextcloud.example.com/*"],
+  "webOrigins": ["http://nextcloud.example.com"],
+  "notBefore": 0,
+  "bearerOnly": false,
+  "consentRequired": false,
+  "standardFlowEnabled": true,
+  "implicitFlowEnabled": false,
+  "directAccessGrantsEnabled": false,
+  "serviceAccountsEnabled": false,
+  "publicClient": false,
+  "frontchannelLogout": true,
+  "protocol": "saml",
+  "attributes": {
+    "saml.assertion.signature": "true",
+    "saml.force.post.binding": "true",
+    "saml.multivalued.roles": "false",
+    "saml.encrypt": "false",
+    "saml_assertion_consumer_url_post": "https://nextcloud.example.com/apps/user_saml/saml/acs",
+    "saml.server.signature": "true",
+    "saml.server.signature.keyinfo.ext": "false",
+    "exclude.session.state.from.auth.response": "false",
+    "saml.signing.certificate": "",
+    "saml_single_logout_service_url_redirect": "https://nextcloud.example.com/apps/user_saml/saml/sls",
+    "saml.signature.algorithm": "RSA_SHA256",
+    "saml_force_name_id_format": "false",
+    "tls.client.certificate.bound.access.tokens": "false",
+    "saml.client.signature": "true",
+    "saml.authnstatement": "true",
+    "display.on.consent.screen": "false",
+    "saml_name_id_format": "username",
+    "saml_signature_canonicalization_method": "http://www.w3.org/2001/10/xml-exc-c14n#",
+    "saml.onetimeuse.condition": "false"
+  },
+  "authenticationFlowBindingOverrides": {},
+  "fullScopeAllowed": true,
+  "nodeReRegistrationTimeout": -1,
+  "protocolMappers": [
+    {
+      "name": "username",
+      "protocol": "saml",
+      "protocolMapper": "saml-user-property-mapper",
+      "consentRequired": false,
+      "config": {
+        "attribute.nameformat": "Basic",
+        "user.attribute": "Username",
+        "friendly.name": "username",
+        "attribute.name": "username"
+      }
+    },
+    {
+      "name": "email",
+      "protocol": "saml",
+      "protocolMapper": "saml-user-property-mapper",
+      "consentRequired": false,
+      "config": {
+        "attribute.nameformat": "Basic",
+        "user.attribute": "Email",
+        "friendly.name": "email",
+        "attribute.name": "email"
+      }
+    }
+  ],
+  "defaultClientScopes": ["web-origins", "profile", "roles", "email"],
+  "optionalClientScopes": [
+    "address",
+    "phone",
+    "offline_access",
+    "microprofile-jwt"
+  ],
+  "access": {
+    "view": true,
+    "configure": true,
+    "manage": true
+  }
+}

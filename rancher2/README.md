@@ -2,9 +2,13 @@
 
 ## Configure Rancher
 
+### Generate Private Key and Certificate
+
 ```sh
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout myservice.key -out myservice.cert
 ```
+
+### Configure SAML Keycloak
 
 **Global** -> **Security** -> **Authentication** -> **SAML Keycloak**
 
