@@ -68,3 +68,5 @@ Select **Save**
 Change **Valid Redirect URIs** from `https://nextcloud.example.com/apps/user_saml/saml/acs` to `https://nextcloud.example.com/*`
 
 Remove `role_list` from **Client Scopes** -> **Setup** -> **Assigned Default Client Scopes**
+
+![NextCloud Settings](nextcloud-settings.png "NextCloud Settings")
