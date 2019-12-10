@@ -2,6 +2,8 @@
 
 ## Configure Flectra
 
+https://odoo-community.org/shop/product/keycloak-auth-integration-4530
+
 **General Settings** -> **Integrations** -> **OAuth Authentication**
 
 | Key                | Value                                                                                      |
