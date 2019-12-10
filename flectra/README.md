@@ -4,6 +4,8 @@
 
 https://odoo-community.org/shop/product/keycloak-auth-integration-4530
 
+https://gitlab.com/flectra-hq/developer-tools
+
 **General Settings** -> **Integrations** -> **OAuth Authentication**
 
 | Key                | Value                                                                                      |
