@@ -1,0 +1,57 @@
+# dc=example,dc=com
+# ├─ cn=admin
+# ├─ ou=accounts
+# │  ├─ uid=jsmith
+# ├─ ou=roles
+# │  ├─ cn=admin
+
+version: 1
+
+# ORGANIZATION
+dn: dc=example,dc=com
+objectClass: dcObject
+objectClass: organization
+objectClass: top
+dc: example
+o: Example
+
+# LDAP ADMIN
+dn: cn=admin,dc=example,dc=com
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword: <SOME_PASSWORD_HASH>
+description: LDAP administrator
+
+# ROLES
+dn: ou=roles,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: roles
+
+# USER ROLE
+dn: cn=admin,ou=roles,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: admin
+member: uid=jsmith,ou=accounts,dc=example,dc=com
+
+# ACCOUNTS
+dn: ou=accounts,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: accounts
+
+# USER ACCOUNT
+dn: uid=jsmith,ou=accounts,dc=example,dc=com
+objectClass: PostfixBookMailAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: John
+sn: Smith
+mail: jsmith@example.com
+uid: jsmith
+mailEnabled: TRUE
+userPassword: {CRYPT}<SOME_PASSWORD_HASH>
