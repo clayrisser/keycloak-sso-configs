@@ -4,6 +4,8 @@
 
 > common keycloak single sign on configurations
 
+![](assets/keycloak-sso-configs.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 
