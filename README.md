@@ -8,6 +8,7 @@
 
 Please ★ this repo if you found it useful ★ ★ ★
 
+![](assets/keycloak-sso-configs)
 
 ## Features
 
